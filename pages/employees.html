@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Employees from Societe Mere</h1>
+    <ul>
+        {% for employee in employees_societe_mere %}
+            <li>{{ employee.nom }} {{ employee.prenom }} - Arrived on: {{ employee.date_arrivee }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Employees from Usine Rachetee</h1>
+    <ul>
+        {% for employee in employees_usine_rachetee %}
+            <li>{{ employee.nom }} {{ employee.prenom }} - Started on: {{ employee.date_demarrage }} - Present: {{ employee.presence }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
