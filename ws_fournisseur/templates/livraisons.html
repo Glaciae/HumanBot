@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraisons</title>
+</head>
+<body>
+    <h1>Livraisons</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Livraison</th>
+                <th>ID Fournisseur</th>
+                <th>Date Livraison</th>
+                <th>Quantité</th>
+                <th>ID Employé</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for livraison in livraisons %}
+            <tr>
+                <td>{{ livraison.ID_Livraison }}</td>
+                <td>{{ livraison.ID_Fournisseur }}</td>
+                <td>{{ livraison.Date_Livraison }}</td>
+                <td>{{ livraison.Quantité }}</td>
+                <td>{{ livraison.ID_Employé }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
